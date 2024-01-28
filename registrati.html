@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="/accedi.html">Accedi</a></li>
+        <li><a href="/registrati.html">Registrati</a></li>
+    </ul>
+    <h1 class="header">Pagina di registrazione</h1>
+    <div id="registrationForm">
+        <form method="POST">
+            <input type="hidden" name="registration" value="true">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome"/><br>
+            <label for="cognome">Cognome</label>
+            <input type="text" id="cognome" name="cognome"/><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"/><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/><br>
+            <button type="submit" onclick="window.location.href='homepage.html'">Invia</button>
+        </form>
+    </div>
+    
+</body>
+</html>

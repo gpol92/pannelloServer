@@ -19,3 +19,24 @@
     background-color: orange;
 }
 
+.header {
+    text-align: center;
+}
+
+#loginForm {
+    text-align: center;
+    width: 200px;
+    background-color: green;
+    margin: auto;
+}
+
+#registrationForm {
+    text-align: center;
+    width: 200px;
+    background-color: green;
+    margin: auto;
+}
+#email,
+#password {
+    margin-bottom: 10px;
+}

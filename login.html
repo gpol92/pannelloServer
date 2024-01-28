@@ -4,117 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register-Login</title>
+    <link rel="stylesheet" href="./style.css"
 </head>
-<style>
-    .domanda {
-        text-align: center;
-    }
-
-    #loginBtn {
-        background-color: greenyellow;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-    #registerBtn {
-        background-color: greenyellow;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-    .buttons {
-        text-align: center;
-    }
-
-    .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        padding: 20px;
-        background-color: green;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    #registrationPopup {
-        left: 50%;
-        transform: translateX(-70%);
-    }
-
-    #loginPopup {
-        left: 50%;
-        transform: translateX(50%);
-    }
-
-    #nome, 
-    #cognome,
-    #email,
-    #password {
-        margin-bottom: 10px;
-    }
-
-    #closeButton {
-        background-color: gray;
-        margin-top: 10px;
-    }
-</style>
 <body>
-    <div class="buttons">
-        <button id="loginBtn">Accedi</button>
-        <button id="registerBtn">Registrati</button>
-    </div>
-
-    <div id="registrationPopup" class="popup">
-        <h2>Form di registrazione</h2>
-        <form method="POST" action="/login.html">
-            <input type="hidden" name="registration" value="true">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome"/><br>
-            <label for="cognome">Cognome</label>
-            <input type="text" id="cognome" name="cognome"/><br>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email"/><br>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password"/><br>
-            <button type="submit">Invia</button>
-        </form>
-        <button id="closeButton" onclick="closePopup('registrationPopup')">Chiudi</button>
-    </div>
-
-    <div id="loginPopup" class="popup">
-        <h2>Form di login</h2>
-        <form method="POST">
-            <label for="email">Email</label>
-            <input type="email" id="email"/><br>
-            <label for="password">Password</label>
-            <input type="password" id="password"/><br>
-            <button type="submit" onclick="handleSubmit()">Login</button>
-        </form>
-        <button id="closeButton" onclick="closePopup('loginPopup')">Chiudi</button>
-    </div>
-    <script>
-        function handleSubmit() {   
-            fetch('/login.html')
-            .then(console.log(response))
-        }
-        function showPopup(popupId) {
-            let popup = document.getElementById(popupId);
-            popup.style.display = "block";
-        }
-        function closePopup(popupId) {
-            let popup = document.getElementById(popupId);
-            popup.style.display = "none";
-        }
-        yesButton = document.getElementById("registerBtn");
-        noButton = document.getElementById("loginBtn");
-
-        yesButton.addEventListener("click", function () {
-            showPopup("registrationPopup");
-        });
-        noButton.addEventListener("click", function () {
-            showPopup("loginPopup");
-        })
-    </script>
+    <ul class="navbar">
+        <li><a href="/accedi.html">Accedi</a></li>
+        <li><a href="/registrati.html">Registrati</a></li>
+    </ul>
 </body>
 </html>
